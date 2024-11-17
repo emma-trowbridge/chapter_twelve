@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.bignerdranch.android.chapter_twelve.database.CrimeDatabase
+import kotlinx.coroutines.flow.Flow
 import java.util.UUID
 
 private const val DATABASE_NAME = "crime-database"
@@ -18,7 +19,8 @@ class CrimeRepository private constructor(context: Context){
         .createFromAsset(DATABASE_NAME)
         .build()
 
-    suspend fun getCrimes():List<Crime> = database.crimeDAO().getCrimes()
+//  suspend fun getCrimes():List<Crime> = database.crimeDAO().getCrimes()
+    fun getCrimes(): Flow<List<Crime>> = database.crimeDAO().getCrimes() //changed to <List>
     suspend fun getCrime(id:UUID):Crime = database.crimeDAO().getCrime(id)
 
     companion object {
