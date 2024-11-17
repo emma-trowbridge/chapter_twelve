@@ -1,4 +1,4 @@
-package com.bignerdranch.android.chapter_eleven
+package com.bignerdranch.android.chapter_twelve
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

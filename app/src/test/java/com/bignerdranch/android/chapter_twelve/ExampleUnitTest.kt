@@ -1,4 +1,4 @@
-package com.bignerdranch.android.chapter_eleven
+package com.bignerdranch.android.chapter_twelve
 
 import org.junit.Test
 

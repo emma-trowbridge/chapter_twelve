@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "com.bignerdranch.android.chapter_eleven"
+    namespace = "com.bignerdranch.android.chapter_twelve"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bignerdranch.android.chapter_eleven"
+        applicationId = "com.bignerdranch.android.chapter_twelve"
         minSdk = 34
         targetSdk = 34
         versionCode = 1
@@ -46,10 +47,19 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
     implementation (libs.androidx.recyclerview)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.fragment.ktx)
+
+    //Coroutines
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+    //Rooms
+    implementation (libs.androidx.room.common)
+    implementation (libs.androidx.room.ktx)
+    //KSP
+    ksp(libs.moshi.kotlin.codegen)
+    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
