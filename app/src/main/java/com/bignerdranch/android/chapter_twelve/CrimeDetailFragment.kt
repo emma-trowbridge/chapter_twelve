@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.widget.doOnTextChanged
 import com.bignerdranch.android.chapter_twelve.databinding.FragmentCrimeDetailBinding
 import java.util.Date
@@ -26,7 +27,6 @@ class CrimeDetailFragment : Fragment() {
             isSolved = false
 
         )
-
     }
 
     override fun onCreateView(
